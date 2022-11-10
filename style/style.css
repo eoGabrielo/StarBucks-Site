@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+span {
+  color: #017143;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  background-color: #017143;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.starbucks {
+  width: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.starbucks-pai {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.img-copos {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
+
+
+.logo {
+  width: 80px;
+}
+
+.botao-menu {
+  width: 60px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.botao-menu:hover {
+  transform: translateY(-15px);
+}
+
+/*
+-TRANSIÇÃO SUAVE DO COPO -> trasnform: translateY();
+Entre () coloca quantos pixel quer que se mova, negativo pra cima, positivo pra baixo.
+-O --> Y <-- no translateY significa que vai se mover no eixo Y.
+-Uma transição suave usamos o transition: 0.5s; no elemento, não precisa usar no :hover.
+*/
+
+.green {
+  height: 800px;
+  width: 500px;
+  background-color: #017143;
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+  z-index: 0;
+  border-radius: 90rem 0 0 90rem;
+}
+
+.starbucks-relative {
+  position: relative;
+}
+
+@media (max-width: 1400px) {
+    .img-copos {
+        justify-content: flex-start;
+        left: 20%;
+      }
+}
+
+@media (max-width: 850px) {
+
+    .botao-menu{
+        width: 100px;
+        margin: 5px;
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    .img-copos {
+        justify-content: center;
+        margin-top: 50px;
+        position: static;
+      }
+
+      .starbucks-pai {
+        justify-content: center;
+        margin-top: 50px;
+        background-color: #017143;
+        width: 100%;
+        position: static;
+      }
+
+      .green{
+        display: none;
+      }
+
+      body{
+        padding: 20px 0;
+        margin: 0 auto;
+      }
+}

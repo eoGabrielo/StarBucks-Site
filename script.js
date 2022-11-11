@@ -16,7 +16,7 @@ function trocarImagemVerde(){
     circuloCopo.style.backgroundColor = "#017143";
     circuloCopo.style.transition = "0.5s";
     btnSaibaMais.style.cssText = "background-color: white; color: #017143;"
-    spanSatarBucks.style.color = "white";
+    spanSatarBucks.style.color = "#26d38b";
 
 }
 

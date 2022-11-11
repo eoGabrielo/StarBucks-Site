@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+}
+
+.conteudo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caixa-texto{
+  width: 50%;
+  max-width: 500px;
+}
+
+.caixa-img{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 200px;
+}
+
+.img-copos{
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+
+}
+
+h2 {
+  color: #333;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+span {
+  color: #017143;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  background-color: #017143;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.starbucks {
+  width: 340px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.botao-menu {
+  width: 60px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.botao-menu:hover {
+  transform: translateY(-15px);
+}
+
+/*
+-TRANSIÇÃO SUAVE DO COPO -> trasnform: translateY();
+Entre () coloca quantos pixel quer que se mova, negativo pra cima, positivo pra baixo.
+-O --> Y <-- no translateY significa que vai se mover no eixo Y.
+-Uma transição suave usamos o transition: 0.5s; no elemento, não precisa usar no :hover.
+*/
+
+.circulo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:#017143;
+  top: 0px;
+  left: 0px;
+  clip-path: circle(600px at right 800px); /*Cria o circulo atras do copo*/
+  /*600px -> tamanho do circulo*/
+  /*at right/left -> Escolhe qual lado vai ficar*/
+  /*right 800px -> Posição do circulo quanto maior mais pra baixo, menor mais pra cima*/
+  z-index: -1; /*Pode usar valores negativo no z-index: -1; Assim ele fica por tras de todos elementos*/
+}
+
+/*
+---CIRCULO NO COPO
+
+clip-path: circle(600px at right 800px);
+
+600px -> tamanho do circulo;
+at right/left -> Escolhe qual lado vai ficar;
+right 800px -> Posição do circulo quanto maior mais pra baixo, menor mais pra cima.
+*/
+
+@media (max-width: 1200px) {
+  .conteudo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  .caixa-img{
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  header figure{
+    display: flex;
+    justify-content: center;
+  }
+
+  .circulo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#017143;
+    clip-path: none; 
+    z-index: -1;  
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+
+  span{
+    font-size: 3rem;
+  }
+  
+  body {
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+  }
+
+  .caixa-texto{
+    width: 90%;
+    max-width: 500px;
+  }
+
+  button {
+    background-color: white;
+    color: #017143;
+  }
+}

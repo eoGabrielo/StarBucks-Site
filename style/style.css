@@ -163,3 +163,9 @@ right 800px -> Posição do circulo quanto maior mais pra baixo, menor mais pra 
     color: #017143;
   }
 }
+
+@media (max-width: 450px) {
+  .starbucks {
+    width: 225px;
+  }
+}
